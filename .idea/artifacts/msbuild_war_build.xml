@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="msbuild:war build">
+    <output-path>$PROJECT_DIR$/out/artifacts/msbuild_war_build</output-path>
+    <root id="archive" name="msbuild_war build.war">
+      <element id="artifact" artifact-name="msbuild:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chong.dao.BookMapper">
+
+    
+    <!--查询所有表单信息-->
+    <select id="queryTotalBooks" resultType="Books">
+        select *from test_1.books;
+    </select>
+    <!--查询所有表单信息-分页-->
+    <select id="queryTotalBooks2" resultType="Books">
+        select *from test_1.books
+        limit ${startNum},3;
+    </select>
+    <!--根据提交姓名查询表单信息-->
+    <select id="queryByInputName2" resultType="Books">
+        select *from test_1.books
+        where inputName=#{inputName};
+    </select>
+    <!--根据提交姓名查询表单信息,分页-->
+    <select id="queryByInputName" resultType="Books">
+        select *from test_1.books
+        where inputName=#{inputName}
+        limit ${startNum},3;
+    </select>
+    <!--根据ID查询表单信息-->
+    <select id="queryByBookId" resultType="Books">
+        select *from test_1.books
+        where bookID=#{bookID};
+    </select>
+    <!--根据ID修改表单信息-->
+    <update id="updateByBookId" parameterType="Books">
+        update test_1.books
+        set inputName=#{inputName},phone=#{phone},maintainThing=#{maintainThing},finishName=#{finishName},
+        sayProblem=#{sayProblem},maintainNum=#{maintainNum},bookAddress=#{bookAddress},
+        bookState=#{bookState},end=#{end}
+        where bookID=#{bookID};
+    </update>
+    <!--根据ID删除表单信息-->
+    <delete id="deleteByBookId" parameterType="int">
+        delete from test_1.books
+        where bookID=#{bookID};
+    </delete>
+
+    <!--上传维修表单-->
+    <insert id="inputBooks" parameterType="Books">
+        insert into
+        test_1.books(inputName, phone, maintainThing, finishName, sayProblem, maintainNum, bookAddress, inputTime, finishTime, bookState, end)
+        values(#{inputName}, #{phone}, #{maintainThing}, #{finishName}, #{sayProblem}, #{maintainNum}, #{bookAddress}, #{inputTime}, #{finishTime}, #{bookState}, #{end})
+    </insert>
+
+    <!--根据表单状态查询表单信息-->
+    <select id="queryDeal" resultType="Books">
+        select bookID,inputName,maintainThing,maintainNum,sayProblem,bookAddress,bookState
+        from test_1.books
+        where bookState = #{bookState};
+    </select>
+
+    <!--改变表单状态-->
+    <update id="updateState" parameterType="Books">
+        update test_1.books set bookState = #{bookState}
+        where bookID=#{bookID};
+    </update>
+
+    <!--//点击完成,修改数据-->
+    <update id="inputNameAndState" parameterType="Books">
+        update test_1.books set finishName=#{finishName},finishTime=#{finishTime},end=#{end}
+        where bookID=#{bookID} and bookState=#{bookState};
+    </update>
+    
+    <!--报表信息，根据姓名查询-->
+    <select id="bookSelfe" resultType="Books">
+        select inputName,phone,maintainThing,maintainNum,bookAddress,inputTime,finishTime,bookState
+        from test_1.books
+        where inputName=#{inputName}
+    </select>
+
+    <!--管理员报表信息-->
+    <select id="sumBooks" resultType="BaoBiao">
+        select maintainThing,sum(maintainNum)as main_num,inputTime,finishTime
+        from test_1.books
+        where finishTime between #{inputTime} and  #{finishTime}
+        group by maintainThing,inputTime ,finishTime
+        order by main_num desc
+    </select>
+    <!--根据报表设备查询信息-->
+    <select id="selectSumBooks" resultType="BaoBiao">
+        select maintainThing,sum(maintainNum)as main_num,inputTime,finishTime
+        from test_1.books
+        where maintainThing = #{maintainThing}
+        group by maintainThing,inputTime ,finishTime
+        order by main_num desc
+    </select>
+
+
+</mapper>

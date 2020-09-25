@@ -1,0 +1,336 @@
+
+
+
+ul {
+  
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    position: fixed;
+    overflow: auto;
+    list-style-type: none;
+  
+    position: relative;
+  
+  
+  
+  }
+  
+  
+  .caili{
+  
+    height:100px;
+    
+  background:url("../images/firstSy/底色 位置X0Y93 169 249 328 407.png");
+  background-size: cover;
+  font-size: 20px;
+  
+  padding-left:40px;
+  padding-top: 30px;
+  }
+  
+  
+  .bigli{
+  
+  
+  height: 400px;
+  
+  
+  
+    color: white;
+  
+  
+  
+   
+    padding-left: 20px;
+    
+  
+  
+  
+  
+  }
+  
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    padding-left: 10px;
+   
+    text-decoration: none;
+    font-size: 20px;
+   
+  
+    color: white;
+  
+  
+  }
+  
+  
+  li a.active {
+    background-color:rgb(38, 0, 255);
+    color: white;
+  }
+  
+  li a:hover:not(.active) {
+  
+  
+  background-image: url("../images/firstSy/触发后底色.png");
+  color: white;
+  }
+  
+    .box{
+        
+        width:2000px;
+        height: 1100px;
+   
+  
+  margin: 0 auto ;
+  
+    }
+  
+    .left{
+  width: 300px;
+  height: 1000px;
+        
+  float: left;
+        margin-top: 10px;
+  
+        background-image: url("../images/firstSy/侧边底色 位置X0Y93.png");
+    }                                          
+  
+    .right{
+  
+        width:1700px;
+        height: 1000px;
+        background-color:rgb(255, 255, 255);
+      float: right;
+    }
+    .top{
+  
+             width: 2000px;
+            height: 70px;
+  background-color: white;
+  
+  
+    }
+  
+  
+    .topdiv{
+  
+  
+  width: 190px;
+    height: 70px;
+  float:right;
+  
+  
+    background-image: url("../images/firstSy/矩形 9.png");
+  
+  
+  
+  }
+  
+    .top>div{
+  
+        width: 200px;
+        height: 80px;
+        float:left;
+  margin-left: 30px;
+       
+    }
+  
+  
+    .left>div{
+  
+  color: white;
+        width: 300px;
+        height: 50px;
+        font-size: 1.5em;
+        float: left;
+        background-color:rgb(83, 122, 201);
+  padding-top: 10px;
+  padding-left: 0px;
+    }
+  
+  .biaoti{
+  
+  
+    font-size: 1em;
+  }
+  
+  .tu{
+  
+  display: inline-block;
+  
+  }
+  
+
+  
+  
+  .rightdiv>div{
+  
+    width: 300px;
+    height: 120px;
+    float: left;
+  
+  margin-right: 20px;
+  
+  
+  
+  }
+  
+ 
+  
+  
+  .zi{
+  
+    font-size: 20px;
+    color: cornsilk;
+  
+  
+  }
+  .zixiugai{
+  
+    font-size: 20px;
+    color: cornsilk;
+  
+  
+  }
+  .img{
+  
+  
+    padding-top: 20px;
+  
+    padding-left: 30px;
+  
+  }
+  
+  
+  .xiala{
+  width: 300px;
+  height: 40px;
+  
+  }
+  
+  .little{
+  
+    background-color: rgb(255, 255, 255);
+  
+    
+  }
+  
+  
+  
+  .anniu{
+  
+    position: relative;
+  left:90px;
+   top:60px;
+    
+  }
+  
+  .fenjietu{
+  
+    position: relative;
+  
+  }
+  
+  
+  
+  th{
+  
+    width: 35px;
+  }
+  
+  .onetr{
+  
+    background-color: rgb(55, 248, 235)
+  }
+  
+  .sayhibox{
+  
+    padding-top: 15px;
+    width: 70px;
+    height: 60px;
+    float: right;
+    margin-right: 40px;
+    color: white;
+  
+  
+  }
+  
+  
+  .xiala2{
+  
+    width: 100px;
+    height: 60px;
+    float: left;
+    margin-left: 100px;
+  padding-bottom: 60px;
+  background-color:blue;
+    
+  }
+  
+  button{
+
+width: 140px;
+height: 50px;
+
+  margin-left:30px;
+  margin-top: 30px;
+border: 1px solid rgb(61, 204, 32) ;
+  border-radius: 15px;
+background-color:rgb(61, 204, 32)
+  
+  }
+
+  .text{
+
+
+
+width: 70px;
+
+margin-left:40px;
+
+
+  }
+
+  .p{
+
+    margin-top: 40px;
+  }
+  .input{
+
+    margin-left: 40px;
+
+  }
+
+button>span{
+font-size: 20px;
+color: rgb(255, 255, 255);
+    text-align: center;
+    
+  }
+
+  .rightdivcg{
+  
+    width: 1400px;
+    height: 330px;
+  
+  
+    background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 400px; 
+  top: 150px;
+  background-image: url("../images/firstSy/组 7.png");
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  
+  }
+  .zixiugai{
+  
+    font-size: 20px;
+    color: cornsilk;
+  
+  
+  }

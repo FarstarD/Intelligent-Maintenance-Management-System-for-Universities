@@ -1,0 +1,60 @@
+#app{
+    background-color: aqua;
+}
+#body input{
+    background-color: aqua;
+    margin: 40px ;
+    margin-left: 80px;
+    float: left;
+    /*border: none;
+    */border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -ms-transform: scale(1.5,1.5);
+    -o-transform: scale(1.5,1.5);
+}
+#body input:hover{
+    transform: scale(1.6,1.6);
+    -webkit-transform: scale(1.6,1.6);
+    -moz-transform: scale(1.6,1.6);
+    -ms-transform: scale(1.6,1.6);
+    -o-transform: scale(1.6,1.6);
+}
+#body img{
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    float: left;
+}
+#body a{
+    margin-top: 20px;
+    margin-left: 80px;
+    float: left;
+}
+#title{
+    margin-left: 33px;
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+button{
+box-sizing: border-box;
+    width: 250px;
+    height: 60px;
+    border-radius: 25px;
+
+    margin-left: 20px;
+
+    float: left;
+    background-color: #0099ff;
+    border: 0px;
+    font-size: 30px;
+    color: aliceblue;
+
+}
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chong.dao.UserMapper">
+
+    <!--注册账号-->
+    <insert id="addUser" parameterType="Users">
+        insert into test_1.users(userName, userLogin, userPwd, userSex, userJob, userPhone)
+        values(#{userName},#{userLogin},#{userPwd},#{userSex},#{userJob},#{userPhone})
+    </insert>
+
+    <!--账号登录-->
+    <select id="userLogin" resultType="Users">
+        select * from test_1.users
+        where userName = #{userName} and userLogin = #{userLogin} and userPwd = #{userPwd}
+    </select>
+
+    <!--根据账号查用户-->
+    <select id="queryUserByLogin" resultType="Users">
+        select * from test_1.users
+        where userLogin = #{userLogin} or userJob  = #{userJob}
+    </select>
+    <!--根据姓名查用户-->
+    <select id="queryUserByName" resultType="Users">
+        select * from test_1.users
+        where userName = #{userName}
+    </select>
+
+    <!--根据账号修改用户信息-->
+    <update id="syUpdateUser" parameterType="Users">
+        update test_1.users set userName=#{userName},userPwd=#{userPwd},userSex=#{userSex},userJob=#{userJob},userPhone=#{userPhone}
+        where userLogin=#{userLogin}
+    </update>
+
+    <!--修改密码-->
+    <update id="updatePwd" parameterType="Users">
+        update test_1.users set userPwd = #{newPwd}
+        where userLogin = #{userLogin};
+    </update>
+
+    <!--查询所有用户的信息-->
+    <select id="queryAllUser" resultType="Users">
+        select * from test_1.users
+    </select>
+
+<!--    &lt;!&ndash;根据职务或则真实姓名或则账号查找用户&ndash;&gt;-->
+<!--    <select id="selectUser" resultType="User">-->
+<!--        select * from msbuild.users-->
+<!--        where userName=#{userName} or userLogin=#{userLogin} or  userJob=#{userJob}-->
+<!--    </select>-->
+    <!--根据用户ID删除用户-->
+    <delete id="deleteUserByLogin" parameterType="int">
+        delete from test_1.users where userID=#{userID}
+    </delete>
+
+    <!--分页查询用户-->
+    <select id="usersPage" parameterType="_int">
+        select * from test_1.users limit #{page},2;
+    </select>
+
+</mapper>
